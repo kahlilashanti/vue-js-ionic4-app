@@ -30,8 +30,10 @@ export default {
             //test for valid zip
             if(!isValidZip){
                 this.showAlert();
+                this.zip = "";
             } else {
-                console.log("thanks")
+                this.$emit("get-zip", this.zip)
+                this.zip = "";
             }
         },
         showAlert(){
